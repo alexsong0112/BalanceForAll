@@ -58,3 +58,50 @@
             padding: 15px;
         }
     </style>
+</head>
+<body>
+
+<header>
+    <h1>Balance For All</h1>
+    <p>Promoting Gender Equality and Inclusion</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#issues">Issues</a>
+    <a href="#solutions">Solutions</a>
+</nav>
+
+<div class="container">
+
+    <div class="section" id="about">
+        <h2>About</h2>
+        <p>This website raises awareness about gender equality and encourages people to challenge stereotypes and discrimination. Everyone deserves equal opportunities regardless of gender.</p>
+    </div>
+
+    <div class="section" id="issues">
+        <h2>Common Issues</h2>
+        <ul>
+            <li>Gender stereotypes in school and media</li>
+            <li>Unequal opportunities in careers</li>
+            <li>Discrimination based on gender identity</li>
+        </ul>
+    </div>
+
+    <div class="section" id="solutions">
+        <h2>What You Can Do</h2>
+        <ul>
+            <li>Speak up against stereotypes</li>
+            <li>Support equal opportunities</li>
+            <li>Educate yourself and others</li>
+        </ul>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Balance For All</p>
+</footer>
+
+</body>
+</html>
