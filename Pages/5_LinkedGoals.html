@@ -1,112 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Linked Goals</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f6f8;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linked Goals</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f7fc;
+      color: #333;
+    }
 
-        header {
-            background-color: #6c63ff;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+    /* NAVIGATION BAR */
+    .navbar {
+      background-color: white;
+      padding: 18px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        nav {
-            background-color: #4b47c7;
-            padding: 10px;
-            text-align: center;
-        }
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
 
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .navbar li {
+      display: inline;
+      margin: 0 16px;
+    }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+    .navbar a {
+      text-decoration: none;
+      color: #444;
+      font-weight: bold;
+      font-size: 15px;
+      transition: 0.3s;
+    }
 
-        .container {
-            padding: 30px;
-        }
+    .navbar a:hover {
+      color: #7b5fc7;
+    }
 
-        .section {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+    /* HERO SECTION */
+    .hero {
+      background: linear-gradient(to right, #d9c8ff, #f7d9ff);
+      text-align: center;
+      padding: 100px 20px 90px;
+    }
 
-        h2 {
-            color: #333;
-        }
+    .hero h1 {
+      font-size: 60px;
+      margin-bottom: 10px;
+      color: #4b3f72;
+    }
 
-        footer {
-            background-color: #6c63ff;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-    </style>
+    .hero h2 {
+      font-size: 24px;
+      font-weight: normal;
+      color: #5a4f82;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .hero button {
+      margin-top: 30px;
+      background-color: #6f58c9;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #5841a8;
+    }
+
+    /* SECTION STYLING */
+    section {
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 36px;
+      color: #4b3f72;
+      margin-bottom: 20px;
+    }
+
+    .section-text {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* CARDS */
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background-color: white;
+      width: 280px;
+      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h3 {
+      color: #6f58c9;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: white;
+      background-color: #6f58c9;
+      padding: 10px 20px;
+      border-radius: 25px;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .card a:hover {
+      background-color: #5841a8;
+    }
+
+    /* HIGHLIGHT SECTION */
+    .highlight {
+      background-color: #efe8ff;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: white;
+      text-align: center;
+      padding: 25px;
+      color: #777;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
-<body style="...">
+<body>
 
-<header>
-    <h1>Balance For All</h1>
-    <p>Promoting Gender Equality and Inclusion</p>
-</header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#issues">Issues</a>
-    <a href="#solutions">Solutions</a>
-</nav>
-
-<div class="container">
-
-    <div class="section" id="about">
-        <h2>About</h2>
-        <p>This website raises awareness about gender equality and encourages people to challenge stereotypes and discrimination. Everyone deserves equal opportunities regardless of gender.</p>
-    </div>
-
-    <div class="section" id="issues">
-        <h2>Common Issues</h2>
-        <ul>
-            <li>Gender stereotypes in school and media</li>
-            <li>Unequal opportunities in careers</li>
-            <li>Discrimination based on gender identity</li>
-        </ul>
-    </div>
-
-    <div class="section" id="solutions">
-        <h2>What You Can Do</h2>
-        <ul>
-            <li>Speak up against stereotypes</li>
-            <li>Support equal opportunities</li>
-            <li>Educate yourself and others</li>
-        </ul>
-    </div>
-
-</div>
-
-<footer>
-    <p>© 2026 Balance For All</p>
-</footer>
-
-<br><br>
-<h1 style="text-align: center;">Linked SDG Goals With Gender Equality</h1>
-<hr style="width: 70%" align="center">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="1_HomePage.html">Home</a></li>
+      <li><a href="2_VisualStories.html">Visual Stories</a></li>
+      <li><a href="3_GenderInSports.html">Gender in Sports</a></li>
+      <li><a href="4_GenderInWorkforce.html">Gender in Workforce</a></li>
+      <li><a href="5_LinkedGoals.html">Linked Goals</a></li>
+      <li><a href="6_AreyouEqual.html">Are You Equal?</a></li>
+      <li><a href="7_Ending.html">Join the Change</a></li>
+    </ul>
+  </nav>
+<h1 style="text-align: center;">Linked SDG Goals with Gender Equality</h1>
 </body>
-</html>
