@@ -1,107 +1,166 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Balance For All</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f6f8;
-        }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f7fc;
+  color: #333;
+}
 
-        header {
-            background-color: #6c63ff;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+/* NAVIGATION BAR */
+.navbar {
+  background-color: white;
+  padding: 18px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-        nav {
-            background-color: #4b47c7;
-            padding: 10px;
-            text-align: center;
-        }
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.navbar li {
+  display: inline;
+  margin: 0 16px;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+.navbar a {
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.3s;
+}
 
-        .container {
-            padding: 30px;
-        }
+.navbar a:hover {
+  color: #7b5fc7;
+}
 
-        .section {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(to right, #d9c8ff, #f7d9ff);
+  text-align: center;
+  padding: 100px 20px 90px;
+}
 
-        h2 {
-            color: #333;
-        }
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  color: #4b3f72;
+}
 
-        footer {
-            background-color: #6c63ff;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-    </style>
-</head>
-<body>
+.hero h2 {
+  font-size: 24px;
+  font-weight: normal;
+  color: #5a4f82;
+  margin-bottom: 25px;
+}
 
-<header>
-    <h1>Balance For All</h1>
-    <p>Promoting Gender Equality and Inclusion</p>
-</header>
+.hero p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+}
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#issues">Issues</a>
-    <a href="#solutions">Solutions</a>
-</nav>
+.hero button {
+  margin-top: 30px;
+  background-color: #6f58c9;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-<div class="container">
+.hero button:hover {
+  background-color: #5841a8;
+}
 
-    <div class="section" id="about">
-        <h2>About</h2>
-        <p>This website raises awareness about gender equality and encourages people to challenge stereotypes and discrimination. Everyone deserves equal opportunities regardless of gender.</p>
-    </div>
+/* SECTION STYLING */
+section {
+  padding: 70px 20px;
+  text-align: center;
+}
 
-    <div class="section" id="issues">
-        <h2>Common Issues</h2>
-        <ul>
-            <li>Gender stereotypes in school and media</li>
-            <li>Unequal opportunities in careers</li>
-            <li>Discrimination based on gender identity</li>
-        </ul>
-    </div>
+.section-title {
+  font-size: 36px;
+  color: #4b3f72;
+  margin-bottom: 20px;
+}
 
-    <div class="section" id="solutions">
-        <h2>What You Can Do</h2>
-        <ul>
-            <li>Speak up against stereotypes</li>
-            <li>Support equal opportunities</li>
-            <li>Educate yourself and others</li>
-        </ul>
-    </div>
+.section-text {
+  max-width: 850px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.8;
+}
 
-</div>
+/* CARDS */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
 
-<footer>
-    <p>© 2026 Balance For All</p>
-</footer>
+.card {
+  background-color: white;
+  width: 280px;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
 
-</body>
-</html>
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  color: #6f58c9;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.card a {
+  text-decoration: none;
+  color: white;
+  background-color: #6f58c9;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.card a:hover {
+  background-color: #5841a8;
+}
+
+/* HIGHLIGHT SECTION */
+.highlight {
+  background-color: #efe8ff;
+}
+
+/* FOOTER */
+footer {
+  background-color: white;
+  text-align: center;
+  padding: 25px;
+  color: #777;
+  font-size: 14px;
+  margin-top: 20px;
+}
