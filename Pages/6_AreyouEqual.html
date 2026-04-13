@@ -3,39 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Are You Equal? - Balance For All</title>
+    <title>Are You Equal? - BalanceForAll</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav>
-    <a href="1_HomePage.html">Home</a>
-    <a href="2_VisualStories.html">Visual Stories</a>
-    <a href="3_GenderInSports.html">Sports</a>
-    <a href="4_GenderInWorkforce.html">Workforce</a>
-    <a href="5_LinkedGoals.html">Linked Goals</a>
-    <a href="6_AreyouEqual.html">Quiz</a>
-</nav>
 
-<div class="container">
+    <nav class="navbar">
+        <ul>
+            <li><a href="1_HomePage.html">Home</a></li>
+            <li><a href="2_VisualStories.html">Visual Stories</a></li>
+            <li><a href="3_GenderInSports.html">Gender in Sports</a></li>
+            <li><a href="4_GenderInWorkforce.html">Gender in Workforce</a></li>
+            <li><a href="5_LinkedGoals.html">Linked Goals</a></li>
+            <li><a href="6_AreyouEqual.html">Are You Equal?</a></li>
+            <li><a href="7_Ending.html">Join the Change</a></li>
+        </ul>
+    </nav>
 
-    <div class="section" id="quiz">
-        <h2>Are You Equal?</h2>
+    <section class="hero">
+        <h1>Are You Equal?</h1>
+        <h2>Test your knowledge about gender equality</h2>
         <p>
-            Take this quiz to test your knowledge about gender equality.
+            Take the quiz below and see how much you know about equality,
+            stereotypes, and fairness in everyday life.
+        </p>
+    </section>
+
+    <section class="highlight">
+        <h2 class="section-title">Start the Quiz</h2>
+        <p class="section-text">
+            After you submit, your score will appear in the form. Scroll up if needed.
         </p>
 
-        <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfInPOzpmUw1euTzuTQPWIcIBqnpRrBJmI4nLg3UAh2PhjOjg/viewform?embedded=true"
-            width="100%"
-            height="900">
-        </iframe>
-    </div>
+        <div class="cards">
+            <div class="card" style="width: 90%; max-width: 900px;">
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSfInPOzpmUw1euTzuTQPWIcIBqnpRrBJmI4nLg3UAh2PhjOjg/viewform?embedded=true"
+                    width="100%"
+                    height="800"
+                    style="border:0;">
+                    Loading…
+                </iframe>
+            </div>
+        </div>
+    </section>
 
-</div>
-
-<footer>
-    <p>© 2026 Balance For All</p>
-</footer>
+    <footer>
+        <p>© 2026 Balance For All</p>
+    </footer>
 
 </body>
 </html>
