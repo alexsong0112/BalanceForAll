@@ -3,12 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visual Stories</title>
+  <title>Visual Stories - BalanceForAll</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .story {
+      display: flex;
+      margin: 40px auto;
+      max-width: 900px;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .story img {
+      width: 300px;
+      height: 200px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    .story-text {
+      text-align: left;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- NAVIGATION BAR -->
 <nav class="navbar">
   <ul>
     <li><a href="1_HomePage.html">Balance For All</a></li>
@@ -20,13 +45,61 @@
     <li><a href="7_JointheChange.html">Join the Change</a></li>
   </ul>
 </nav>
-    <section class="hero">
-        <h1>Visual Stories of Gender Equality</h1>
-        <hr class="divider"/>
-        <h2>...</h2>
-    </section>
-  <p style="text-align: center;"> Something</p>
+
+<section class="hero">
+  <h1>Visual Stories</h1>
+  <hr style="border: none; height: 2px; background-color: grey; width: 40%;">
+  <h2>Real stories about gender inequality around the world</h2>
+  <p>Each one of these stories below represent many different examples of gender inequality. Read through them to get a better understanding of the many challenges people face every day.</p>
+</section>
+
+<section>
+
+  <div class="story">
+    <img src="https://c.files.bbci.co.uk/E241/production/_120612975_gettyimages-1235330510.jpg">
+    <div class="story-text">
+      <h3 class="section-title">Girls and Education</h3>
+      <p class="section-text">In some places, like Afghanistan, girls are strictly not allowed to attend schools. This means they miss out on education, opportunities, restricting their future. Education should be a basic right for everyone, regardless of gender.</p>
+    </div>
+  </div>
+
+  <div class="story reverse">
+    <img src="https://www.lieffcabraser.com/wp-content/uploads/The_Verge_Pay_Equity-blog_v3.jpg">
+    <div class="story-text">
+      <h3 class="section-title">The Gender Pay Gap</h3>
+      <p class="section-text">Even today, many women around the world are paid less for doing the same job as a man. This is known as the gender pay gap where men are paid for than women for doing the same job. Equal work deserves equal pay.</p>
+    </div>
+  </div>
+
+  <div class="story">
+    <img src="https://img.freepik.com/premium-vector/women-washing-dishes-sink_864013-1385.jpg">
+    <div class="story-text">
+      <h3 class="section-title">Stereotypes in Advertising</h3>
+      <p class="section-text">In many advertisements, women are often the ones depicted doing household tasks like cleaning, doing laundry, or washing dishes. These repeated images can create the idea that these roles belong only to women. In reality, household tasks should be split between everyone, especially when more women are starting to work now.</p>
+    </div>
+  </div>
+
+  <div class="story reverse">
+    <img src="https://lckingscourier.net/wp-content/uploads/2022/10/nbavswnba.webp">
+    <div class="story-text">
+      <h3 class="section-title">NBA vs WNBA</h3>
+      <p class="section-text">This graph shows the large difference in revenue between the NBA and the WNBA. Even though women's basketball players train just as hard, they receive far less funding, attention, and media coverage. This clearly shows the ongoing inequality in sports and the need for more equal support.</p>
+    </div>
+  </div>
+
+  <div class="story">
+    <img src="https://media.istockphoto.com/id/503495536/vector/two-friends-play-together.jpg?s=612x612&w=0&k=20&c=viFOwgez9XfUgpVHcCWe-cMfWkwkIl2GJkIFefVu9gE=">
+    <div class="story-text">
+      <h3 class="section-title">Toys and Gender Stereotypes</h3>
+      <p class="section-text">From a young age, children are often encouraged to play with different types of toys based on their gender. For example, girls are given dolls while boys are given cars or action toys. With young children growing up with these early stereotypes, it can influence their interests and limit what children feel they are "allowed" to enjoy.</p>
+    </div>
+  </div>
+
+</section>
+
 <footer>
-        <p>© 2026 Balance For All</p>
-    </footer>
+  <p>© 2026 Balance For All</p>
+</footer>
+
 </body>
+</html>
