@@ -169,3 +169,21 @@ body {
       font-size: 14px;
       margin-top: 20px;
     }
+    .container {
+       max-width: 1000px;
+       margin: 0 auto;
+       padding: 20px;
+    }
+
+    .divider {
+       border: none;
+       height: 2px;
+       background-color: grey;
+       width: 75%;
+       margin: 20px auto;
+    }
+
+    .content {
+       text-align: center;
+       margin-top: 20px;
+    }
