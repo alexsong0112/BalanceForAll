@@ -6,7 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gender in Workforce</title>
   <link rel="stylesheet" href="style.css">
-</head>
+     <style>
+    .story {
+      display: flex;
+      margin: 40px auto;
+      max-width: 900px;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .story img {
+      width: 300px;
+      height: 200px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    .story-text {
+      text-align: left;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+  </style>
+  </head>
 
 <body>
 
@@ -26,7 +50,8 @@
 <!-- HERO SECTION -->
 <section class="hero">
   <h1>Gender Bias and Workforce</h1>
-  <h2>How Does Gender Affect Workplace? How Can It Affect Careers and the Pay Gap?</h2>
+    <hr style="border: none; height: 2px; background-color: grey; width: 70%;">
+     <h2>How Does Gender Affect Workplace? How Can It Affect Careers and the Pay Gap?</h2>
 </section>
 
 <section class="highlight">
@@ -37,17 +62,24 @@
   <p class="section-text">
     That means that for every dollar a man is paid, a woman with the same job and position is paid only 87 cents.
   </p>
-</section>
 
-<img src="https://cdn-res.keymedia.com/cms/images/us/039/0308_637959320352862998.jpg">
 
-<div class="container border border-secondary" style="width: 500px; height: 250px">
-  <h2 style="text-align: center">"Broken Rung" Penalty</h2>
-  <p style="text-align: center">
-    The "Broken Rung" Penalty refers to a recurring trend. For every 100 men promoted to manager, only 93 women are.
-  </p>
+  <div class="story reverse">
+    <img src="https://cdn-res.keymedia.com/cms/images/us/039/0308_637959320352862998.jpg">
+    <div class="story-text">
+      <h3 class="section-title">The "Broken Rung" Penalty</h3>
+      <p class="section-text">The "Broken Rung" Penalty refers to a recurring trend. For every 100 men promoted to manager, only 93 women are. Only 48% of women in male-dominated workplaces feel women are treated fairly in promotions</p>
+    </div>
+  </div>
+
+<div class="story">
+    <img src="https://www.gsb.stanford.edu/sites/default/files/styles/webp/public/2021-04/key-image-correll-performance-reviews.jpeg.webp?itok=fI8VP1pa">
+    <div class="story-text">
+         <h3 class="section title">Hiring Bias</h3>
+        <p class="section-text">Women are four times more likely than men to report being treated as if they were not competent because of their gender (23% of women vs. 6% of men).</p>
 </div>
-
+</div>
+</section>
 <footer>
   <p>© 2026 Balance For All</p>
 </footer>
