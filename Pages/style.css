@@ -187,3 +187,21 @@ body {
        text-align: center;
        margin-top: 20px;
     }
+
+    .container1 {
+        transform: translate(-25%, 0%)
+    }
+
+    .section-text1 {
+        text-align: left;
+        width: 30%;
+        position: absolute;
+        transform: translate(100%, -123%)
+    }
+
+        .section-title1 {
+      font-size: 36px;
+      color: #4b3f72;
+      margin-bottom: 20px;
+      transform: translate(0%, -50%)
+    }
