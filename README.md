@@ -1,5 +1,3 @@
-# BalanceForAll
-CP Website Project
 
 # About the project:
 BalanceForAll is a website that we created that focuses on SDG 5 to raise awareness on gender equality. It focuses on many real world aspects like stereotypes, discrimination, and unequal opportunities. Our main goal for this website was to help people understand these problems that people experience and to encourage a positive change.
