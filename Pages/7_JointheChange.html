@@ -6,46 +6,28 @@
   <title>Join the Change | Balance For All</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-
+<!-- NAVIGATION BAR -->
 <nav class="navbar">
-  <a class="navbar-brand" href="1_HomePage.html">Balance For All</a>
-
   <ul>
-    <li><a href="2_VisualStories.html">Visual Stories</a></li>
-    <li><a href="3_GenderInSports.html">Gender in Sports</a></li>
-    <li><a href="4_GenderInWorkforce.html">Gender in Workforce</a></li>
-    <li><a href="5_LinkedGoals.html">Linked Goals</a></li>
-    <li><a href="6_AreyouEqual.html">Are You Equal?</a></li>
-    <li><a href="7_JointheChange.html">Join the Change</a></li>
-  </ul>
-
-  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-
-<div class="mobile-menu" id="mobileMenu">
-  <ul>
+    <li class="logo">Balance For All</li>
     <li><a href="1_HomePage.html">Home</a></li>
     <li><a href="2_VisualStories.html">Visual Stories</a></li>
     <li><a href="3_GenderInSports.html">Gender in Sports</a></li>
     <li><a href="4_GenderInWorkforce.html">Gender in Workforce</a></li>
     <li><a href="5_LinkedGoals.html">Linked Goals</a></li>
     <li><a href="6_AreyouEqual.html">Are You Equal?</a></li>
-    <li><a href="7_JointheChange.html">Join the Change</a></li>
+    <li><a href="7_JointheChange.html" class="active">Join the Change</a></li>
   </ul>
-</div>
+</nav>
 
 <main>
 
-
+<!-- HERO -->
 <section class="hero">
   <h1>Join the Change</h1>
-  <hr style="border: none; height: 2px; background-color: grey; width: 40%;">
+  <hr class="divider">
   <h2>Be part of a more equal future</h2>
   <p>
     Gender inequality still exists in many areas of life, from education to the workplace.
@@ -53,79 +35,59 @@
   </p>
 </section>
 
-
+<!-- WHY IT MATTERS -->
 <section class="container highlight">
-  <h2 class="section-title1">Why It Matters</h2>
-  <p class="section-text1">
+  <h2 class="section-title">Why It Matters</h2>
+  <p class="section-text">
     Around the world, many people still face unequal opportunities and expectations based on gender.
     For example, women earn about <strong>87% of what men earn</strong> for similar work.
-    Equality is not only about fairness—it strengthens communities and improves society for everyone.
+    Equality is not just about fairness—it helps create stronger communities and better outcomes for everyone.
   </p>
 </section>
 
-
+<!-- HOW YOU CAN MAKE A DIFFERENCE -->
 <section class="container highlight">
-  <h2 class="section-title1">How You Can Make a Difference</h2>
+  <h2 class="section-title">How You Can Make a Difference</h2>
 
-  <p class="section-text1">
-    <strong>At school:</strong> Include others, challenge stereotypes, and treat everyone with respect.
+  <p class="section-text">
+    <strong>At school:</strong> Include others, challenge stereotypes, and treat everyone with respect to create a more positive environment.
   </p>
 
-  <p class="section-text1">
-    <strong>Online:</strong> Share positive messages and avoid spreading harmful stereotypes.
+  <p class="section-text">
+    <strong>Online:</strong> What you say and share matters. Promote positive messages and avoid spreading harmful stereotypes.
   </p>
 
-  <p class="section-text1">
-    <strong>In everyday life:</strong> Speak up against unfair treatment and support equality in your community.
+  <p class="section-text">
+    <strong>In everyday life:</strong> Speak up against unfair treatment and encourage equality at home and in your community.
   </p>
 </section>
 
-
+<!-- BIGGER MOVEMENT -->
 <section class="container highlight">
-  <h2 class="section-title1">Be Part of Something Bigger</h2>
-  <p class="section-text1">
-    Organizations like UN Women, HeForShe, and Girls Who Code are working globally to promote equality.
-    You can support, learn from, and join movements like these to help create real change.
+  <h2 class="section-title">Be Part of Something Bigger</h2>
+  <p class="section-text">
+    Global organizations are already working toward equality. UN Women promotes gender equality worldwide,
+    HeForShe encourages collective action, and Girls Who Code helps close the gender gap in technology.
+    You can be part of this movement.
   </p>
 </section>
 
-
+<!-- FINAL MESSAGE -->
 <section class="container highlight">
-  <h2 class="section-title1">Think & Act</h2>
-  <p class="section-text1">
+  <h2 class="section-title">Think & Act</h2>
+  <p class="section-text">
     What is one action you can take today to support equality?
-    Change begins with awareness—and grows through consistent action.
+    Change does not happen all at once—it happens through consistent, everyday actions.
+    By being aware and speaking up, you can help build a more equal world.
   </p>
 </section>
 
 </main>
 
-
+<!-- FOOTER -->
 <footer>
   <p>© 2026 Balance For All</p>
 </footer>
-
-
-<script>
-  const btn = document.getElementById('hamburger');
-  const menu = document.getElementById('mobileMenu');
-
-  btn.addEventListener('click', () => {
-    const isOpen = btn.classList.toggle('open');
-    menu.classList.toggle('open', isOpen);
-    btn.setAttribute('aria-expanded', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-  });
-
-  menu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      btn.classList.remove('open');
-      menu.classList.remove('open');
-      btn.setAttribute('aria-expanded', false);
-      document.body.style.overflow = '';
-    });
-  });
-</script>
 
 </body>
 </html>
