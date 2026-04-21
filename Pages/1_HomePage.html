@@ -5,13 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Visual Stories</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 18px;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      color: #6f58c9;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 14px;
+      background: #d9c8ff;
+      color: #4b3f72;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .card a:hover {
+      background: #c7b3ff;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 10px auto 0;
+      line-height: 1.6;
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- NAVIGATION BAR -->
 <nav class="navbar">
+  <a class="navbar-brand" href="1_HomePage.html">Balance For All</a>
+
   <ul>
-    <li><a href="1_HomePage.html">Balance For All</a></li>
     <li><a href="2_VisualStories.html">Visual Stories</a></li>
     <li><a href="3_GenderInSports.html">Gender in Sports</a></li>
     <li><a href="4_GenderInWorkforce.html">Gender in Workforce</a></li>
@@ -19,97 +74,135 @@
     <li><a href="6_AreyouEqual.html">Are You Equal?</a></li>
     <li><a href="7_JointheChange.html">Join the Change</a></li>
   </ul>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="1_HomePage.html">Home</a></li>
+    <li><a href="2_VisualStories.html">Visual Stories</a></li>
+    <li><a href="3_GenderInSports.html">Gender in Sports</a></li>
+    <li><a href="4_GenderInWorkforce.html">Gender in Workforce</a></li>
+    <li><a href="5_LinkedGoals.html">Linked Goals</a></li>
+    <li><a href="6_AreyouEqual.html">Are You Equal?</a></li>
+    <li><a href="7_JointheChange.html">Join the Change</a></li>
+  </ul>
+</div>
 
-<!-- MAIN TITLE / HERO -->
 <section class="hero">
   <h1>BalanceForAll</h1>
   <hr style="border: none; height: 2px; background-color: grey; width: 40%;">
-
   <h2>Understanding fairness, rights, and opportunities</h2>
+
   <p>
     Gender equality means that everyone, regardless of gender, has the same rights,
     opportunities, and respect. However, inequality still exists in areas like sports,
     education, and the workplace.
   </p>
-
-  <a href="6_AreyouEqual.html">
-  </a>
 </section>
 
+<div class="container">
 
-  <div class="container">
+  <section class="highlight">
+    <h2 class="section-title1">Why It Matters</h2>
+    <p class="section-text1">
+      Many people still experience unfair treatment based on gender. This can include
+      differences in pay, fewer opportunities, or stereotypes that limit what people
+      are expected to do. By learning about these issues, we can better understand
+      how to challenge them and create change.
+    </p>
+  </section>
 
-<!-- WHY IT MATTERS -->
-<section class="highlight">
-  <h2 class="section-title">Why It Matters</h2>
-  <p class="section-text">
-    Many people still experience unfair treatment based on gender. This can include
-    differences in pay, fewer opportunities, or stereotypes that limit what people
-    are expected to do. By learning about these issues, we can better understand
-    how to challenge them and create change.
-  </p>
-</section>
+  <section>
+    <h2 class="explore-heading">Explore the Website</h2>
 
-<!-- EXPLORE SECTIONS -->
-<section>
-  <h2 style="text-align: center;">Explore the Website</h2>
+    <div class="cards">
 
-  <div class="cards">
+      <div class="card">
+        <h3>Visual Stories</h3>
+        <p>See real-life perspectives on gender equality.</p>
+        <a href="2_VisualStories.html">View</a>
+      </div>
 
-    <div class="card">
-      <h3>Visual Stories</h3>
-      <p>See real-life perspectives on gender equality.</p>
-      <a href="2_VisualStories.html">View</a>
+      <div class="card">
+        <h3>Gender in Sports</h3>
+        <p>Explore fairness and representation in sports.</p>
+        <a href="3_GenderInSports.html">View</a>
+      </div>
+
+      <div class="card">
+        <h3>Gender in Workforce</h3>
+        <p>Learn about jobs, pay gaps, and opportunities.</p>
+        <a href="4_GenderInWorkforce.html">View</a>
+      </div>
+
+      <div class="card">
+        <h3>Linked Goals</h3>
+        <p>Discover how equality connects to global goals.</p>
+        <a href="5_LinkedGoals.html">View</a>
+      </div>
+
+      <div class="card">
+        <h3>Are You Equal?</h3>
+        <p>Test your awareness with an interactive quiz.</p>
+        <a href="6_AreyouEqual.html">Try Now</a>
+      </div>
+
+      <div class="card">
+        <h3>Join the Change</h3>
+        <p>Find ways to take action and make a difference.</p>
+        <a href="7_JointheChange.html">Get Involved</a>
+      </div>
+
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Gender in Sports</h3>
-      <p>Explore fairness and representation in sports.</p>
-      <a href="3_GenderInSports.html">View</a>
-    </div>
-
-    <div class="card">
-      <h3>Gender in Workforce</h3>
-      <p>Learn about jobs, pay gaps, and opportunities.</p>
-      <a href="4_GenderInWorkforce.html">View</a>
-    </div>
-
-    <div class="card">
-      <h3>Linked Goals</h3>
-      <p>Discover how equality connects to global goals.</p>
-      <a href="5_LinkedGoals.html">View</a>
-    </div>
-
-    <div class="card">
-      <h3>Are You Equal?</h3>
-      <p>Test your awareness with an interactive quiz.</p>
-      <a href="6_AreyouEqual.html">Try Now</a>
-    </div>
-
-    <div class="card">
-      <h3>Join the Change</h3>
-      <p>Find ways to take action and make a difference.</p>
-      <a href="7_JointheChange.html">Get Involved</a>
-    </div>
-
+  <br>
+  <br>
+  <section class="highlight">
+  <div style="text-align:center; margin-top: 30px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Sustainable_Development_Goal_05GenderEquality.svg/330px-Sustainable_Development_Goal_05GenderEquality.svg.png"
+         alt="Gender Equality SDG" width="160">
   </div>
-</section>
-<div style="text-align:center;">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Sustainable_Development_Goal_05GenderEquality.svg/330px-Sustainable_Development_Goal_05GenderEquality.svg.png" alt="Gender Equality SDG"></div>
 
-    <!-- CALL TO ACTION -->
-<section>
-  <h2>Make a Difference</h2>
-  <p>
-    Change starts with awareness. Explore the site, learn something new,
-    and think about how you can support gender equality in your daily life.
-  </p>
-</section>
-  </div>
+  <section style="text-align:center; margin-top: 30px;">
+    <h2>Make a Difference</h2>
+    <p>
+      Change starts with awareness. Explore the site, learn something new,
+      and think about how you can support gender equality in your daily life.
+    </p>
+  </section>
+  </section>
+
+</div>
 
 <footer>
-        <p>© 2026 Balance For All</p>
-    </footer>
+  <p>© 2026 Balance For All</p>
+</footer>
+
+<script>
+  const btn = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+
+  btn.addEventListener('click', () => {
+    const isOpen = btn.classList.toggle('open');
+    menu.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', false);
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+
 </body>
+</html>

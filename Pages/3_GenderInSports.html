@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visual Stories</title>
+  <title>Gender in Sports - Balance For All</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- NAVIGATION BAR -->
+
 <nav class="navbar">
+  <a class="navbar-brand" href="1_HomePage.html">Balance For All</a>
+
   <ul>
-    <li><a href="1_HomePage.html">Balance For All</a></li>
     <li><a href="2_VisualStories.html">Visual Stories</a></li>
     <li><a href="3_GenderInSports.html">Gender in Sports</a></li>
     <li><a href="4_GenderInWorkforce.html">Gender in Workforce</a></li>
@@ -19,27 +21,72 @@
     <li><a href="6_AreyouEqual.html">Are You Equal?</a></li>
     <li><a href="7_JointheChange.html">Join the Change</a></li>
   </ul>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 
- <section class="hero">
-        <h1>Gender Inequality in Sports</h1>
-       <hr style="border: none; height: 2px; background-color: grey; width: 60%;">
-        <h2>What is Gender Inequality in Sports? How Does it Effect Athletes?</h2>
-    </section>
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="1_HomePage.html">Home</a></li>
+    <li><a href="2_VisualStories.html">Visual Stories</a></li>
+    <li><a href="3_GenderInSports.html">Gender in Sports</a></li>
+    <li><a href="4_GenderInWorkforce.html">Gender in Workforce</a></li>
+    <li><a href="5_LinkedGoals.html">Linked Goals</a></li>
+    <li><a href="6_AreyouEqual.html">Are You Equal?</a></li>
+    <li><a href="7_JointheChange.html">Join the Change</a></li>
+  </ul>
+</div>
 
-  <section class="highlight">
-  <h2 class="section-title">What is it?</h2>
-  <p class="section-text">
-    Now let's look into what gender inequality looks like in sports. Gender inequality in sports is when
-      there are 'barriers' that prevent an athlete from reaching their full potential in their sports due to
-      their gender. This results in disparity in athletics, and it occurs in women and girls, for many reasons.
-      For example, female athletes receive significantly less pay than their male counterpart, as well as less funding,
-      sponsorships, media coverage, and hold less leadership and decision-making roles.
+
+<section class="hero">
+  <h1>Gender Inequality in Sports</h1>
+  <hr style="border: none; height: 2px; background-color: grey; width: 60%;">
+  <h2>What is Gender Inequality in Sports? How does it affect athletes?</h2>
+</section>
+
+
+<section class="highlight">
+  <h2 class="section-title1">What is it?</h2>
+
+  <p class="section-text1">
+    Gender inequality in sports refers to barriers that prevent athletes from reaching their full potential due to their gender.
+    It leads to disparities in opportunities, funding, and recognition between male and female athletes.
+    <br><br>
+    For example, female athletes often receive significantly lower pay compared to male athletes, as well as less sponsorship,
+    media coverage, and fewer leadership opportunities in sports organizations. These inequalities limit growth and visibility
+    for women in athletics.
   </p>
-  </section>
+</section>
+
 
 <footer>
-        <p>© 2026 Balance For All</p>
-    </footer>
+  <p>© 2026 Balance For All</p>
+</footer>
+
+
+<script>
+  const btn = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+
+  btn.addEventListener('click', () => {
+    const isOpen = btn.classList.toggle('open');
+    menu.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', false);
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+
 </body>
+</html>
