@@ -3,12 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visual Stories</title>
+  <title>Gender in Sports</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── extra responsive fixes for this page ── */
+    .hero p {
+      max-width: 800px;
+      margin: 10px auto 0;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      padding: 50px 20px;
+    }
+
+    .section-text {
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.8;
+      font-size: clamp(15px, 2vw, 18px);
+    }
+
+    /* MOBILE FIX */
+    @media (max-width: 760px) {
+      .hero {
+        padding: 60px 16px;
+      }
+
+      .section-title {
+        font-size: 22px;
+        text-align: center;
+      }
+
+      .section-text {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- NAVIGATION BAR -->
+<!-- NAVBAR -->
 <nav class="navbar">
   <a class="navbar-brand" href="1_HomePage.html">Balance For All</a>
 
@@ -26,6 +63,7 @@
   </button>
 </nav>
 
+<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <ul>
     <li><a href="1_HomePage.html">Home</a></li>
@@ -38,25 +76,56 @@
   </ul>
 </div>
 
+<!-- HERO -->
+<section class="hero">
+  <h1>Gender Inequality in Sports</h1>
+  <hr style="border: none; height: 2px; background-color: grey; width: 60%;">
+  <h2>What is Gender Inequality in Sports? How Does it Affect Athletes?</h2>
 
- <section class="hero">
-        <h1>Gender Inequality in Sports</h1>
-       <hr style="border: none; height: 2px; background-color: grey; width: 60%;">
-        <h2>What is Gender Inequality in Sports? How Does it Effect Athletes?</h2>
-    </section>
-
-  <section class="highlight">
-  <h2 class="section-title">What is it?</h2>
-  <p class="section-text">
-    Now let's look into what gender inequality looks like in sports. Gender inequality in sports is when
-      there are 'barriers' that prevent an athlete from reaching their full potential in their sports due to
-      their gender. This results in disparity in athletics, and it occurs in women and girls, for many reasons.
-      For example, female athletes receive significantly less pay than their male counterpart, as well as less funding,
-      sponsorships, media coverage, and hold less leadership and decision-making roles.
+  <p>
+    Sports should be fair for everyone, but gender inequality still exists in many areas such as pay,
+    funding, media coverage, and leadership opportunities.
   </p>
-  </section>
+</section>
 
+<!-- CONTENT -->
+<section class="highlight">
+  <h2 class="section-title">What is it?</h2>
+
+  <p class="section-text">
+    Gender inequality in sports refers to barriers that prevent athletes from reaching their full
+    potential because of their gender. This leads to unequal treatment in pay, sponsorships,
+    funding, media attention, and leadership roles. Female athletes are often the most affected,
+    even when they perform at the same level as men.
+  </p>
+</section>
+
+<!-- FOOTER -->
 <footer>
-        <p>© 2026 Balance For All</p>
-    </footer>
+  <p>© 2026 Balance For All</p>
+</footer>
+
+<!-- MOBILE MENU SCRIPT -->
+<script>
+  const btn = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+
+  btn.addEventListener('click', () => {
+    const isOpen = btn.classList.toggle('open');
+    menu.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', false);
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+
 </body>
+</html>

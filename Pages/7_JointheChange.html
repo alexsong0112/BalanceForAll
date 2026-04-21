@@ -5,10 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Join the Change | Balance For All</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── HERO TEXT RESPONSIVENESS ── */
+    .hero p {
+      max-width: 800px;
+      margin: 10px auto 0;
+      line-height: 1.6;
+    }
+
+    /* ── SECTION SPACING FIX ── */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px 16px;
+    }
+
+    .highlight {
+      padding: 40px 20px;
+    }
+
+    .section-text {
+      max-width: 850px;
+      margin: 0 auto;
+      line-height: 1.8;
+      font-size: clamp(15px, 2vw, 18px);
+    }
+
+    .section-title {
+      text-align: center;
+    }
+
+    /* ── MOBILE RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 60px 16px;
+      }
+
+      .section-text {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .highlight {
+        padding: 28px 14px;
+      }
+
+      .section-title {
+        font-size: 20px;
+      }
+
+      .section-text {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- NAVIGATION BAR -->
+<!-- NAVBAR -->
 <nav class="navbar">
   <a class="navbar-brand" href="1_HomePage.html">Balance For All</a>
 
@@ -26,6 +84,7 @@
   </button>
 </nav>
 
+<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <ul>
     <li><a href="1_HomePage.html">Home</a></li>
@@ -38,12 +97,10 @@
   </ul>
 </div>
 
-<main>
-
 <!-- HERO -->
 <section class="hero">
   <h1>Join the Change</h1>
-  <hr class="divider">
+  <hr style="border: none; height: 2px; background-color: grey; width: 60%;">
   <h2>Be part of a more equal future</h2>
   <p>
     Gender inequality still exists in many areas of life, from education to the workplace.
@@ -51,50 +108,47 @@
   </p>
 </section>
 
-<!-- WHY IT MATTERS -->
+<!-- CONTENT -->
+<main>
+
 <section class="container highlight">
   <h2 class="section-title">Why It Matters</h2>
   <p class="section-text">
     Around the world, many people still face unequal opportunities and expectations based on gender.
     For example, women earn about <strong>87% of what men earn</strong> for similar work.
-    Equality is not just about fairness—it helps create stronger communities and better outcomes for everyone.
+    Equality improves society for everyone.
   </p>
 </section>
 
-<!-- HOW YOU CAN MAKE A DIFFERENCE -->
 <section class="container highlight">
   <h2 class="section-title">How You Can Make a Difference</h2>
 
   <p class="section-text">
-    <strong>At school:</strong> Include others, challenge stereotypes, and treat everyone with respect to create a more positive environment.
+    <strong>At school:</strong> Be inclusive, challenge stereotypes, and respect others.
   </p>
 
   <p class="section-text">
-    <strong>Online:</strong> What you say and share matters. Promote positive messages and avoid spreading harmful stereotypes.
+    <strong>Online:</strong> Share positive messages and avoid harmful stereotypes.
   </p>
 
   <p class="section-text">
-    <strong>In everyday life:</strong> Speak up against unfair treatment and encourage equality at home and in your community.
+    <strong>In everyday life:</strong> Speak up against unfair treatment and support equality.
   </p>
 </section>
 
-<!-- BIGGER MOVEMENT -->
 <section class="container highlight">
   <h2 class="section-title">Be Part of Something Bigger</h2>
   <p class="section-text">
-    Global organizations are already working toward equality. UN Women promotes gender equality worldwide,
-    HeForShe encourages collective action, and Girls Who Code helps close the gender gap in technology.
-    You can be part of this movement.
+    Organizations like UN Women, HeForShe, and Girls Who Code are working globally for equality.
+    You can support and join this movement through awareness and action.
   </p>
 </section>
 
-<!-- FINAL MESSAGE -->
 <section class="container highlight">
   <h2 class="section-title">Think & Act</h2>
   <p class="section-text">
     What is one action you can take today to support equality?
-    Change does not happen all at once—it happens through consistent, everyday actions.
-    By being aware and speaking up, you can help build a more equal world.
+    Small actions build big change over time.
   </p>
 </section>
 
@@ -104,6 +158,28 @@
 <footer>
   <p>© 2026 Balance For All</p>
 </footer>
+
+<!-- MOBILE MENU SCRIPT -->
+<script>
+  const btn = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+
+  btn.addEventListener('click', () => {
+    const isOpen = btn.classList.toggle('open');
+    menu.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', false);
+      document.body.style.overflow = '';
+    });
+  });
+</script>
 
 </body>
 </html>

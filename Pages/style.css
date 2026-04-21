@@ -265,7 +265,7 @@ body {
       .story-card img {
         width: 100%;
         max-width: 320px;
-        height: 220px;
+        height: 320px;
       }
 
       .story-text h3 { text-align: center; }
