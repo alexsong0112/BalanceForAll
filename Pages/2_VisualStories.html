@@ -1,49 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Visual Stories - BalanceForAll</title>
- <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visual Stories - BalanceForAll</title>
+<link rel="stylesheet" href="style.css">
 
+<style>
+/* =========================
+   STORY LAYOUT (DESKTOP)
+========================= */
+.story {
+  display: flex;
+  margin: 40px auto;
+  max-width: 900px;
+  gap: 30px;
+  align-items: center;
+  padding: 0 16px;
+}
 
- <style>
-   .story {
-     display: flex;
-     margin: 40px auto;
-     max-width: 900px;
-     gap: 30px;
-     align-items: center;
-   }
+.story img {
+  width: 300px;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
 
+.story-text {
+  text-align: left;
+}
 
-   .story img {
-     width: 300px;
-     height: 200px;
-     border-radius: 15px;
-     object-fit: cover;
-   }
+.reverse {
+  flex-direction: row-reverse;
+}
 
+/* =========================
+   HERO TEXT
+========================= */
+.hero p {
+  max-width: 700px;
+  margin: 10px auto 0;
+  line-height: 1.6;
+}
 
-   .story-text {
-     text-align: left;
-   }
+/* =========================
+   TABLET + MOBILE
+========================= */
+@media (max-width: 768px) {
+  .story,
+  .story.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
 
+  .story img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
 
-   .reverse {
-     flex-direction: row-reverse;
-   }
- </style>
+  .story-text {
+    text-align: center;
+  }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+@media (max-width: 480px) {
+  .story {
+    margin: 25px auto;
+    gap: 15px;
+  }
+
+  .story-text h3 {
+    font-size: 18px;
+  }
+
+  .story-text p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+</style>
 </head>
-
 
 <body>
 
-
+<!-- NAVBAR -->
 <nav class="navbar">
   <a class="navbar-brand" href="1_HomePage.html">Balance For All</a>
 
   <ul>
+    <li><a href="1_HomePage.html">Home</a></li>
     <li><a href="2_VisualStories.html">Visual Stories</a></li>
     <li><a href="3_GenderInSports.html">Gender in Sports</a></li>
     <li><a href="4_GenderInWorkforce.html">Gender in Workforce</a></li>
@@ -57,6 +107,7 @@
   </button>
 </nav>
 
+<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <ul>
     <li><a href="1_HomePage.html">Home</a></li>
@@ -69,71 +120,88 @@
   </ul>
 </div>
 
-
+<!-- HERO -->
 <section class="hero">
- <h1>Visual Stories</h1>
- <hr style="border: none; height: 2px; background-color: grey; width: 40%;">
- <h2>Stories about gender inequality around the world</h2>
- <p>Each one of these stories below represent many different examples of gender inequality. Read through them to get a better understanding of the many challenges people face every day.</p>
+  <h1>Visual Stories</h1>
+  <hr style="border: none; height: 2px; background-color: grey; width: 40%;">
+  <h2>Stories about gender inequality around the world</h2>
+  <p>
+    Each story represents real examples of gender inequality.
+    Read through them to understand the challenges people face every day.
+  </p>
 </section>
 
-
+<!-- STORIES -->
 <section>
 
+  <div class="story">
+    <img src="https://c.files.bbci.co.uk/E241/production/_120612975_gettyimages-1235330510.jpg">
+    <div class="story-text">
+      <h3>Girls and Education</h3>
+      <p>In some places, like Afghanistan, girls are not allowed to attend school, limiting their future opportunities. Education should be a basic right for everyone.</p>
+    </div>
+  </div>
 
- <div class="story">
-   <img src="https://c.files.bbci.co.uk/E241/production/_120612975_gettyimages-1235330510.jpg">
-   <div class="story-text">
-     <h3 class="section-title">Girls and Education</h3>
-     <p class="section-text">In some places, like Afghanistan, girls are strictly not allowed to attend schools. This means they have to miss out on education, opportunities, restricting their future. Education should be a basic right for everyone, regardless of gender.</p>
-   </div>
- </div>
+  <div class="story reverse">
+    <img src="https://www.lieffcabraser.com/wp-content/uploads/The_Verge_Pay_Equity-blog_v3.jpg">
+    <div class="story-text">
+      <h3>The Gender Pay Gap</h3>
+      <p>Women are often paid less than men for the same job. Equal work deserves equal pay.</p>
+    </div>
+  </div>
 
+  <div class="story">
+    <img src="https://img.freepik.com/premium-vector/women-washing-dishes-sink_864013-1385.jpg">
+    <div class="story-text">
+      <h3>Stereotypes in Advertising</h3>
+      <p>Women are often shown doing household chores, reinforcing stereotypes. Household work should be shared equally.</p>
+    </div>
+  </div>
 
- <div class="story reverse">
-   <img src="https://www.lieffcabraser.com/wp-content/uploads/The_Verge_Pay_Equity-blog_v3.jpg">
-   <div class="story-text">
-     <h3 class="section-title">The Gender Pay Gap</h3>
-     <p class="section-text">Even today, many women around the world are paid less for doing the same job as a man. This is known as the gender pay gap where men are paid for than women for doing the same job. Equal work deserves equal pay.</p>
-   </div>
- </div>
+  <div class="story reverse">
+    <img src="https://lckingscourier.net/wp-content/uploads/2022/10/nbavswnba.webp">
+    <div class="story-text">
+      <h3>NBA vs WNBA</h3>
+      <p>Women’s sports receive less funding, attention, and media coverage despite equal effort and talent.</p>
+    </div>
+  </div>
 
-
- <div class="story">
-   <img src="https://img.freepik.com/premium-vector/women-washing-dishes-sink_864013-1385.jpg">
-   <div class="story-text">
-     <h3 class="section-title">Stereotypes in Advertising</h3>
-     <p class="section-text">In many advertisements, women are often the ones depicted doing household tasks like cleaning, doing laundry, or washing dishes. These repeated images can create the idea that these roles belong only to women. In reality, household tasks should be split between everyone, especially when more women are starting to work now.</p>
-   </div>
- </div>
-
-
- <div class="story reverse">
-   <img src="https://lckingscourier.net/wp-content/uploads/2022/10/nbavswnba.webp">
-   <div class="story-text">
-     <h3 class="section-title">NBA vs WNBA</h3>
-     <p class="section-text">This graph shows the large difference in revenue between the NBA and the WNBA. Even though women's basketball players train just as hard, they receive far less funding, attention, and media coverage. This clearly shows the ongoing inequality in sports and the need for more equal support.</p>
-   </div>
- </div>
-
-
- <div class="story">
-   <img src="https://media.istockphoto.com/id/503495536/vector/two-friends-play-together.jpg?s=612x612&w=0&k=20&c=viFOwgez9XfUgpVHcCWe-cMfWkwkIl2GJkIFefVu9gE=">
-   <div class="story-text">
-     <h3 class="section-title">Toys and Gender Stereotypes</h3>
-     <p class="section-text">From a young age, children are often encouraged to play with different types of toys based on their gender. For example, girls are given dolls while boys are given cars or action toys. With young children growing up with these early stereotypes, it can influence their interests and limit what children feel they are "allowed" to enjoy.</p>
-   </div>
- </div>
-
+  <div class="story">
+    <img src="https://media.istockphoto.com/id/503495536/vector/two-friends-play-together.jpg">
+    <div class="story-text">
+      <h3>Toys and Gender Stereotypes</h3>
+      <p>Children are often guided toward toys based on gender, which can limit interests and creativity.</p>
+    </div>
+  </div>
 
 </section>
 
-
+<!-- FOOTER -->
 <footer>
- <p>© 2026 Balance For All</p>
+  <p>© 2026 Balance For All</p>
 </footer>
 
+<!-- HAMBURGER SCRIPT -->
+<script>
+  const btn = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+
+  btn.addEventListener('click', () => {
+    const isOpen = btn.classList.toggle('open');
+    menu.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', false);
+      document.body.style.overflow = '';
+    });
+  });
+</script>
 
 </body>
 </html>
-
