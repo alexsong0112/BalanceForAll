@@ -3,15 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join the Change</title>
+  <title>Join the Change | Balance For All</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .hero p {
+      max-width: 800px;
+      margin: 10px auto 0;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px 16px;
+    }
+
+    .highlight {
+      padding: 40px 20px;
+    }
+
+    .section-text {
+      max-width: 850px;
+      margin: 0 auto;
+      line-height: 1.8;
+      font-size: clamp(15px, 2vw, 18px);
+    }
+
+    .section-title {
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 60px 16px;
+      }
+
+      .section-text {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .highlight {
+        padding: 28px 14px;
+      }
+
+      .section-title {
+        font-size: 20px;
+      }
+
+      .section-text {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- NAVIGATION BAR -->
+
 <nav class="navbar">
+  <a class="navbar-brand" href="1_HomePage.html">Balance For All</a>
+
   <ul>
-    <li><a href="1_HomePage.html">Balance For All</a></li>
     <li><a href="2_VisualStories.html">Visual Stories</a></li>
     <li><a href="3_GenderInSports.html">Gender in Sports</a></li>
     <li><a href="4_GenderInWorkforce.html">Gender in Workforce</a></li>
@@ -19,70 +75,104 @@
     <li><a href="6_AreyouEqual.html">Are You Equal?</a></li>
     <li><a href="7_JointheChange.html">Join the Change</a></li>
   </ul>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
-<!-- HERO -->
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="1_HomePage.html">Home</a></li>
+    <li><a href="2_VisualStories.html">Visual Stories</a></li>
+    <li><a href="3_GenderInSports.html">Gender in Sports</a></li>
+    <li><a href="4_GenderInWorkforce.html">Gender in Workforce</a></li>
+    <li><a href="5_LinkedGoals.html">Linked Goals</a></li>
+    <li><a href="6_AreyouEqual.html">Are You Equal?</a></li>
+    <li><a href="7_JointheChange.html">Join the Change</a></li>
+  </ul>
+</div>
+
 <section class="hero">
   <h1>Join the Change</h1>
-  <hr style="border: none; height: 2px; background-color: grey; width: 40%;">
-  <h2>Be part of a more equal future.</h2>
+  <hr style="border: none; height: 2px; background-color: grey; width: 60%;">
+  <h2>Be part of a more equal future</h2>
   <p>
     Gender inequality still exists in many areas of life, from education to the workplace.
-    But change is possible, and it starts with everyday actions from people like you.
+    Real change starts with everyday actions from individuals like you.
   </p>
 </section>
 
-<!-- WHY IT MATTERS -->
-   <div class="container">
+<main>
 
-  <section class="highlight">
-    <h2 class="section-title">Why It Matters</h2>
-    <p class="section-text">
-      Around the world, women are still paid less, given fewer opportunities, and face unfair expectations based on gender.
-      For example, women earn about <b>87% of what men earn</b> for similar work. Equality is not just fairness, it improves society for everyone.
-    </p>
-  </section>
+<section class="container highlight">
+  <h2 class="section-title">Why It Matters</h2>
+  <p class="section-text">
+    Around the world, many people still face unequal opportunities and expectations based on gender.
+    For example, women earn about <strong>87% of what men earn</strong> for similar work.
+    Equality improves society for everyone.
+  </p>
+</section>
 
-</div>
-
-<!-- HOW YOU CAN MAKE A DIFFERENCE -->
-<section class="highlight">
+<section class="container highlight">
   <h2 class="section-title">How You Can Make a Difference</h2>
 
   <p class="section-text">
-    At school, including everyone, challenging stereotypes, and treating people equally helps create a more respectful environment.
+    <strong>At school:</strong> Be inclusive, challenge stereotypes, and respect others.
   </p>
 
   <p class="section-text">
-    Online, the way you speak and what you share matters. Supporting positive messages and avoiding harmful stereotypes helps spread awareness.
+    <strong>Online:</strong> Share positive messages and avoid harmful stereotypes.
   </p>
 
   <p class="section-text">
-    In everyday life, speaking up against unfair treatment and encouraging equality at home or in your community can make a real difference over time.
+    <strong>In everyday life:</strong> Speak up against unfair treatment and support equality.
   </p>
 </section>
 
-<!-- BIGGER MOVEMENT -->
-<section class="highlight">
+<section class="container highlight">
   <h2 class="section-title">Be Part of Something Bigger</h2>
   <p class="section-text">
-    Organizations like UN Women work globally to promote equality, HeForShe encourages everyone to take action, and Girls Who Code helps close the gender gap in technology.
+    Organizations like UN Women, HeForShe, and Girls Who Code are working globally for equality.
+    You can support and join this movement through awareness and action.
   </p>
 </section>
 
-<!-- FINAL MESSAGE -->
-<section class="highlight">
+<section class="container highlight">
   <h2 class="section-title">Think & Act</h2>
   <p class="section-text">
-    What is one thing you can do today to promote equality? How can you challenge stereotypes in your own life?
-    Change doesn’t happen all at once, it happens through everyday actions. By being aware and speaking up, you can help build a more equal world.
+    What is one action you can take today to support equality?
+    Small actions build big change over time.
   </p>
 </section>
 
-<!-- FOOTER -->
+</main>
+
 <footer>
   <p>© 2026 Balance For All</p>
 </footer>
+
+<script>
+  const btn = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+
+  btn.addEventListener('click', () => {
+    const isOpen = btn.classList.toggle('open');
+    menu.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', false);
+      document.body.style.overflow = '';
+    });
+  });
+</script>
 
 </body>
 </html>
