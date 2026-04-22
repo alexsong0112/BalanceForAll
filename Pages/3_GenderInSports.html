@@ -5,39 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gender in Sports</title>
   <link rel="stylesheet" href="style.css">
+
+    <style>
+    .story {
+      display: flex;
+      margin: 40px auto;
+      max-width: 950px;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .story img {
+      width: 300px;
+      height: 200px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    .story-text {
+      text-align: left;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+  </style>
+
   <style>
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 18px;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      color: #6f58c9;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 14px;
+      background: #d9c8ff;
+      color: #4b3f72;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .card a:hover {
+      background: #c7b3ff;
+    }
+
     .hero p {
-      max-width: 800px;
+      max-width: 700px;
       margin: 10px auto 0;
       line-height: 1.6;
     }
-
-    .highlight {
-      padding: 50px 20px;
-    }
-
-    .section-text {
-      max-width: 900px;
-      margin: 0 auto;
-      line-height: 1.8;
-      font-size: clamp(15px, 2vw, 18px);
-    }
-
-    @media (max-width: 760px) {
-      .hero {
-        padding: 60px 16px;
-      }
-
-      .section-title {
-        font-size: 22px;
-        text-align: center;
-      }
-
-      .section-text {
-        text-align: center;
-      }
-    }
   </style>
+
 </head>
 
 <body>
@@ -86,15 +134,98 @@
 </section>
 
 
-<section class="highlight">
-  <h2 class="section-title">What is it?</h2>
+<div style="text-align:center; margin-top: 30px;">
+    <img src="https://img.olympics.com/images/image/private/t_social_share_thumb/f_auto/primary/fu0iezzhvk0edgyv6rob"
+         alt="Gender Equality SDG" width="690">
+  </div>
 
-  <p class="section-text">
-    Gender inequality in sports refers to barriers that prevent athletes from reaching their full
-    potential because of their gender. This leads to unequal treatment in pay, sponsorships,
-    funding, media attention, and leadership roles. Female athletes are often the most affected,
-    even when they perform at the same level as men.
-  </p>
+  <section style="text-align:center; margin-top: 30px;">
+  </section>
+
+
+<div class="container">
+
+
+  <section class="highlight">
+    <h2 class="section-title1">What Is It?</h2>
+    <p class="section-text1">
+      Gender inequality in sports refers to barriers that prevent athletes from reaching their full
+      potential because of their gender. This leads to unequal treatment in pay, sponsorships,
+      funding, media attention, and leadership roles. Female athletes are often the most affected,
+      even when they perform at the same level as men. Let's look into the statistics, how's, and why's.
+    </p>
+  </section>
+
+
+
+<section>
+  <div class="story reverse">
+    <img src="https://weare.wcc.nsw.edu.au/wp-content/uploads/2023/08/H_R_Block_SBNation_Lede.0.jpg">
+    <div class="story-text">
+      <h3 class="section-title">Pay Gap Parity</h3>
+      <p class="section-text">In athletics, women tend to receive significantly less pay compared to men the same sport. For example, men get up to 100x more salary than women in some extreme cases. In basketball, men earn around $13 million annually, but women earn around $580,000. </p>
+    </div>
+  </div>
+
+  <div class="cards">
+
+      <div class="card">
+        <h3>Megan Rapinoe</h3>
+        <p>Was a leading voice in the U.S Women's National Team in advocating for the equality of men's and women's pay in soccer. She filled lawsuits in 2019 due to the discrimination as the women's team were more successful and profitable than the mens. The lawsuit led to the agreement of a 50-50 split between mens and women's pay and prize money, and $22 million  pay back to the women's team. </p>
+        <a href="https://en.wikipedia.org/wiki/Megan_Rapinoe">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>Billie Jean King</h3>
+        <p>Revolutionized sport, specifically Tennis, by threatening to boycott after winning the 1972 US Open and receiving less prize money that the men's champion. This led to the US Open being the first Grand Slam to offer equal pay for men and women due to her efforts. She then founded the Women's Tennis Association with other female tennis players, providing a powerful and collective voice for women's rights in sports. Many other Grand Slams now follow equal pay. </p>
+        <a href="https://en.wikipedia.org/wiki/Billie_Jean_King">Learn More</a>
+      </div>
+  </div>
+
+  <div class="story">
+    <img src="https://dornsife.usc.edu/news/wp-content/uploads/sites/7/2023/04/story-3451-768x432.jpg">
+    <div class="story-text">
+      <h3 class="section-title">Media Coverage</h3>
+      <p class="section-text">In news reports, broadcasts, and on social media, only about 15% of sports media coverage is on women. This lack of media coverage leads to less fans as less people watch their competition. This in turn can lead to less money and sponsorships, and overall, lower salaries. This cycle of inequality is why women's sports are underappreciated.</p>
+    </div>
+  </div>
+
+  <div class="cards">
+
+      <div class="card">
+        <h3>The International Olympic Committee (IOC)</h3>
+        <p>The International Olympic Committee (IOC) has begun prioritizing 50-50 male and female media attention to combat gender-biased sports coverage. In 2018, they released guidelines to ensure media coverage focuses on sporting achievements for both genders, and that female media coverage is not focused on stereotypes, appearance, or personal life. They have also created clear policies emphasizing on biased-free representation of women's sports.</p>
+        <a href="https://www.olympics.com/ioc/gender-equality">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>UN Women</h3>
+        <p>An organization that works to promote gender equality in sports media, and partners with sports bodies to improve how women athletes are portrayed in the media. Their impact has led to 3 times the global coverage of women's sports over recent years, rising about 16%. This has led to more wide-spread engagement in female athletics, resulting in better pay for women as well. </p>
+        <a href="https://www.unwomen.org/en/partnerships/media-collaboration">Learn More</a>
+      </div>
+  </div>
+
+
+  <div class="story reverse">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCx1X9lMTV6-_NC4Hm0nIgl5TAI3NCDZH1WA&s">
+    <div class="story-text">
+      <h3 class="section-title">Leadership & Decision-Making Roles</h3>
+      <p class="section-text">Women only hold about 10% of leadership roles in global sports organizations. This means that around more than 80% of the sports governing board positions are held by men in many international federations. Even in women's sports, key decisions are often still made by males. Globally, less than 20% of elite coaching roles are held by women. Why does this matter? Well leadership roles can control budget distribution between men and women's sports funding, media coverage decisions, facility access, and prize money and tournament investment. </p>
+    </div>
+  </div>
+
+  <div class="cards">
+
+      <div class="card">
+        <h3>Kristy Coventry</h3>
+        <p> A former Olympic swimmer from Zimbabwe, now the first woman elected as President of the International Olympic Committee as of 2025. Although she previously served on the IOC Executive Board and chaired key commissions, she is now one of the most powerful decision-makers in world sport. She represents a major shift in global sports governance leadership. </p>
+        <a href="https://en.wikipedia.org/wiki/Kirsty_Coventry">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>Fatma Samoura</h3>
+        <p>She is the first female Secretary General of the Fédération Internationale de Football Association (FIFA) in 2016. She is now leading  one of the most powerful sports organizations in the world, and played a key role in expanding investment and visibility in women's football. She also helped increase focus on development of the FIFA Women's World Cup.</p>
+        <a href="https://en.wikipedia.org/wiki/Fatma_Samoura">Learn More</a>
+      </div>
+    </div>
+
 </section>
 
 
