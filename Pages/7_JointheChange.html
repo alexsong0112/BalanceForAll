@@ -20,6 +20,14 @@
 
     .highlight {
       padding: 40px 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+
+    .highlight.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .section-text {
@@ -31,6 +39,44 @@
 
     .section-title {
       text-align: center;
+    }
+
+    /* NEW: Cards */
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    /* NEW: Buttons */
+    .action-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 16px;
+      border: none;
+      background: #333;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .action-btn:hover {
+      background: #555;
     }
 
     @media (max-width: 768px) {
@@ -62,7 +108,6 @@
 
 <body>
 
-
 <nav class="navbar">
   <a class="navbar-brand" href="1_HomePage.html">Balance For All</a>
 
@@ -79,7 +124,6 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
-
 
 <div class="mobile-menu" id="mobileMenu">
   <ul>
@@ -117,17 +161,29 @@
 <section class="container highlight">
   <h2 class="section-title">How You Can Make a Difference</h2>
 
-  <p class="section-text">
-    <strong>At school:</strong> Be inclusive, challenge stereotypes, and respect others.
-  </p>
+  <div class="card-container">
+    <div class="card">
+      <h3>At School</h3>
+      <p>Be inclusive and respect everyone.</p>
+<button class="action-btn" onclick="window.open('https://www.unicef.org/education', '_blank')">
+  Learn About Inclusive Education
+</button>    </div>
 
-  <p class="section-text">
-    <strong>Online:</strong> Share positive messages and avoid harmful stereotypes.
-  </p>
+    <div class="card">
+      <h3>Online</h3>
+      <p>Share positive and supportive messages.</p>
+<button class="action-btn" onclick="window.open('https://www.commonsensemedia.org/digital-citizenship', '_blank')">
+  Be a Positive Digital Citizen
+</button>    </div>
 
-  <p class="section-text">
-    <strong>In everyday life:</strong> Speak up against unfair treatment and support equality.
-  </p>
+    <div class="card">
+      <h3>Everyday Life</h3>
+      <p>Speak up against unfair treatment.</p>
+<button class="action-btn" onclick="window.open('https://www.unwomen.org/en/get-involved', '_blank')">
+  Take Action for Equality
+</button>    </div>
+  </div>
+
 </section>
 
 <section class="container highlight">
@@ -136,6 +192,12 @@
     Organizations like UN Women, HeForShe, and Girls Who Code are working globally for equality.
     You can support and join this movement through awareness and action.
   </p>
+
+  <div style="text-align:center;">
+<button class="action-btn" onclick="window.open('https://www.heforshe.org/en', '_blank')">
+  Join HeForShe
+    </button>
+  </div>
 </section>
 
 <section class="container highlight">
@@ -144,8 +206,13 @@
     What is one action you can take today to support equality?
     Small actions build big change over time.
   </p>
-</section>
 
+  <div style="text-align:center;">
+    <button class="action-btn" onclick="window.open('https://www.globalgoals.org/take-action/', '_blank')">
+      I Will Take Action
+    </button>
+  </div>
+</section>
 </main>
 
 <footer>
@@ -169,6 +236,17 @@
       menu.classList.remove('open');
       btn.setAttribute('aria-expanded', false);
       document.body.style.overflow = '';
+    });
+  });
+
+  // Fade-in effect
+  const sections = document.querySelectorAll('.highlight');
+  window.addEventListener('scroll', () => {
+    sections.forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 50) {
+        sec.classList.add('show');
+      }
     });
   });
 </script>
