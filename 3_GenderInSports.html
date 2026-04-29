@@ -33,6 +33,93 @@
    .reverse {
      flex-direction: row-reverse;
    }
+
+.story img {
+  max-width: 100%;
+}
+
+
+@media (max-width: 768px) {
+
+
+  .story,
+  .story.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .story img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .story-text {
+    text-align: center;
+  }
+
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Better text scaling */
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .story {
+    margin: 25px auto;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+
+  .section-title,
+  .section-title1 {
+    font-size: 18px;
+  }
+
+  .section-text,
+  .section-text1 {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero h2 {
+    font-size: 16px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+}
  </style>
 
 
